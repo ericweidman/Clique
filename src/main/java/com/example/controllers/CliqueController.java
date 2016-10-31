@@ -4,10 +4,7 @@ import com.example.entities.User;
 import com.example.services.UserRepository;
 import com.example.utils.PasswordStorage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by ericweidman on 10/31/16.
@@ -40,6 +37,20 @@ public class CliqueController {
             throw new Exception("Username already taken");
         }
     }
+
+    @RequestMapping(path = "/edit-user", method = RequestMethod.PUT)
+    public String editUser(String newUserName) {
+
+        return null;
+
+    }
+
+    @RequestMapping(path = "/delete_user", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable("id") int id) {
+        users.delete(id);
+    }
+
+    
 
 
 }
