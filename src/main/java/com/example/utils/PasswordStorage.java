@@ -35,7 +35,7 @@ public class PasswordStorage
         }
     }
 
-    public static final String PBKDF2_ALGORITHM = "DBKDF2WithHmacSHA1";
+    public static final String PBKDF2_ALGORITHM = "PBKDF2WithHmacSHA1";
 
     // These constants may be changed without breaking existing hashes.
     public static final int SALT_BYTE_SIZE = 24;
