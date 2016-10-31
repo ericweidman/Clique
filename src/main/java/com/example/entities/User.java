@@ -22,7 +22,7 @@ public class User {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(nullable = false)
-    private String passwordHash;
+    private String password;
 
     public User() {
     }
@@ -40,9 +40,9 @@ public class User {
         this.userName = userName;
     }
 
-    public User(String userName, String passwordHash) {
+    public User(String userName, String password) {
         this.userName = userName;
-        this.passwordHash = passwordHash;
+        this.password = password;
     }
 
     public String getUserName() {
@@ -53,12 +53,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {
