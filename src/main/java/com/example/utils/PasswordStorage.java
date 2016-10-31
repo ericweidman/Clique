@@ -2,7 +2,7 @@
 //All credit for this code should go to defuse @ github.
 //Class can be found here https://github.com/defuse/password-hashing
 
-package utils;
+package com.example.utils;
 
 import java.security.SecureRandom;
 import javax.crypto.spec.PBEKeySpec;
@@ -35,7 +35,7 @@ public class PasswordStorage
         }
     }
 
-    public static final String PBKDF2_ALGORITHM = "PBKDF2WithHmacSHA1";
+    public static final String PBKDF2_ALGORITHM = "DBKDF2WithHmacSHA1";
 
     // These constants may be changed without breaking existing hashes.
     public static final int SALT_BYTE_SIZE = 24;
