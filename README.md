@@ -1,4 +1,5 @@
                                           -- Design Document for Clique --
+                                          
                                                Created by Eric Weidman 
                                           
 **Features:**  
@@ -9,6 +10,7 @@ User Created Cliques (chatrooms)
 
                     
                                             -- (Current) Technologies --
+                                            
                               Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
                    
 **Unique User Account**:  
