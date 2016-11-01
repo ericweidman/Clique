@@ -18,6 +18,9 @@ Start your direct message feature. Use things learned here to work on main chat 
 Stop over thinking how many-to-many's work. Idiot.
 Style the shit out of all of it.
 
+You need a clique object. One that stores the name of the clique, and all of it's messages by user id.
+Study up on joins now.
+
 --
 
 Figure out wtf a favicon is. Frontend devs come up with stupid names for stuff.

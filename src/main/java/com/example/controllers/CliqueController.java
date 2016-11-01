@@ -126,11 +126,15 @@ public class CliqueController {
 
     }
 
-    /////////////////
-    //MESSAGE ROUTES
-    ////////////////
+    ////////////////////////
+    //DIRECT MESSAGE ROUTES
+    ///////////////////////
 
     @RequestMapping(path = "/save-message", method = RequestMethod.POST)
+
+    //This code is going to need to be changed drastically.
+    //Currently does not save who message was sent to.
+
     public void saveMessage(HttpSession session, String message) throws Exception {
         String userName = (String) session.getAttribute("userName");
         if (userName == null) {
@@ -141,4 +145,18 @@ public class CliqueController {
 
         messages.save(newMessage);
     }
+
+    /////////////////
+    //CLIQUE ROUTES
+    ////////////////
+
+    @RequestMapping(path ="/clique-message", method = RequestMethod.POST)
+    public void cliqueMessage(HttpSession session, String message) throws Exception {
+        String userName = (String) session.getAttribute("userName");
+        if (userName == null){
+            throw new Exception("You must be logged in to chat");
+        }
+
+    }
+
 }
