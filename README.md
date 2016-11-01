@@ -20,7 +20,7 @@ Voting system to add additional users to Cliques
 
 
                     
-**User Account**:
+**User Account**:  
 Size: Medium
 
 The user will need to provide a valid e-mail address and password
@@ -41,7 +41,7 @@ Users can upload a profile picture
 
 --
 
-**Friends List**:
+**Friends List**:  
 Size: Small
 
 The user can add others to their friends list, users can than manage
@@ -57,7 +57,7 @@ Users can remove friends
 
 --
 
-**Direct Chat**:
+**Direct Chat**:  
 Size: Small
 
 The user can send messages directly to friends.
