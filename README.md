@@ -27,7 +27,7 @@ The user will need to provide a valid e-mail address and password
 in order to create an account. The user can then update this information, and
 choose to upload a profile picture.
 
-Assumptions:
+Assumptions:  
 The user has a valid e-mail address
 
 Acceptance:  
@@ -47,7 +47,7 @@ Size: Small
 The user can add others to their friends list, users can than manage
 their friends list.
 
-Assumptions:
+Assumptions:  
 The user has an account, there are other users to add
 
 Acceptance:  
@@ -62,7 +62,7 @@ Size: Small
 
 The user can send messages directly to friends.
 
-Assumptions:
+Assumptions:  
 The user has added another user to their friends list
 
 Acceptance:  
@@ -85,7 +85,7 @@ leave their friends clique at any time.
 Invites to cliques will only extended to users if a majority of the users in
 a clique approve.
 
-Assumptions:
+Assumptions:  
 The user has a friend to add to their clique
 
 Acceptance:  
