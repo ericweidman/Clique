@@ -6,11 +6,11 @@
 
                               
 **Features:**  
-*Unique User Accounts  
-*Friends List  
-*Direct Chat  
-*User Created Cliques (chatrooms)  
-*Voting system to add additional users to Cliques  
+Unique User Accounts  
+Friends List  
+Direct Chat  
+User Created Cliques (chatrooms)  
+Voting system to add additional users to Cliques  
 
 
                                                    -- Road Map --
