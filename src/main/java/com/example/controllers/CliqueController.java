@@ -61,7 +61,7 @@ public class CliqueController {
 
     @RequestMapping(path = "/edit-user", method = RequestMethod.PUT)
     public void editUser(String newUserName) {
-
+    //Needs to accept any and all personal information changes.
 
     }
 
