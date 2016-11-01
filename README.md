@@ -6,20 +6,20 @@
 
                               
 **Features:**
-Unique User Accounts
-Friends List
-Direct Chat
-User Created Cliques (chatrooms)
-Voting system to add additional users to Cliques
+-Unique User Accounts
+-Friends List
+-Direct Chat
+-User Created Cliques (chatrooms)
+-Voting system to add additional users to Cliques
 
 
                                                    -- Road Map --
                     
                           Use Google Identity API and/or Facebook Login API for authentication
+
+
                     
-                                                 -- User Stories --
-                    
-                                                    User Account
+**User Account**:
 Size: Medium
 
 The user will need to provide a valid e-mail address and password
@@ -38,9 +38,9 @@ Users can update their e-mail address
 Users can update their password
 Users can upload a profile picture
 
--
+--
 
-                                                    Friends List
+**Friends List**:
 Size: Small
 
 The user can add others to their friends list, users can than manage
@@ -54,10 +54,9 @@ Users can view all added friends
 Users can add friends either by username or email address
 Users can remove friends
 
--
+--
 
-                                                    Direct Chat
-
+**Direct Chat**:
 Size: Small
 
 The user can send messages directly to friends.
@@ -71,10 +70,10 @@ The latest 50 messages from the conversation will be displayed
 Older messages will be archived
 Timestamps are stored and displayed
 
--
+--
 
-                                                User created Cliques
-  (This section needs to be broken into smaller sections with greater detail)
+**User created Cliques**:
+(This section needs to be broken into smaller sections with greater detail)
 
 Size: Large
 
@@ -98,4 +97,4 @@ Messages can be viewed by all users
 Messages will be timestamped
 Messages from the past 24 hours will be displayed
 
--
+
