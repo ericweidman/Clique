@@ -1,6 +1,8 @@
 package com.example.controllers;
 
 import com.example.entities.User;
+import com.example.services.FriendRepository;
+import com.example.services.MessageRepository;
 import com.example.services.UserRepository;
 import com.example.utils.PasswordStorage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +15,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class CliqueController {
 
+
     @Autowired
     UserRepository users;
+    @Autowired
+    MessageRepository messages;
+    @Autowired
+    FriendRepository friends;
+
+
 
 
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
