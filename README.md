@@ -1,24 +1,16 @@
                                           -- Design Document for Clique --
-                    
-                                            -- (Current) Technologies --
-                    
-                              Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
 
-                              
 **Features:**  
 Unique User Accounts  
 Friends List  
 Direct Chat  
 User Created Cliques (chatrooms)  
 
-
-                                                   -- Road Map --
                     
-                          Use Google Identity API and/or Facebook Login API for authentication
-                        Users who decide to terminate thier clique can be kicked by vote instead
-
-
+                                            -- (Current) Technologies --
                     
+                              Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
+                   
 **Unique User Account**:  
 
 The user will need to provide a valid e-mail address and password
@@ -99,5 +91,10 @@ The first invite sent by a clique is always approved
 Messages can be viewed by all users  
 Messages will be timestamped  
 Messages from the past 24 hours will be displayed  
+
+                                                   -- Road Map --
+                    
+                          Use Google Identity API and/or Facebook Login API for authentication
+                        Users who decide to terminate thier clique can be kicked by vote instead
 
 
