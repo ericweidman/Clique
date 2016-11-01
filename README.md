@@ -72,7 +72,7 @@ Timestamps are stored and displayed
 
 --
 
-**User created Cliques**:
+**User created Cliques**  
 (This section needs to be broken into smaller sections with greater detail)
 
 Size: Large
