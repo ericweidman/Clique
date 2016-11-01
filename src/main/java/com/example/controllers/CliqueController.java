@@ -2,6 +2,7 @@ package com.example.controllers;
 
 import com.example.entities.Message;
 import com.example.entities.User;
+import com.example.services.CliqueRepository;
 import com.example.services.FriendRepository;
 import com.example.services.MessageRepository;
 import com.example.services.UserRepository;
@@ -25,6 +26,8 @@ public class CliqueController {
     MessageRepository messages;
     @Autowired
     FriendRepository friends;
+    @Autowired
+    CliqueRepository clique;
 
 
     //////////////////////
