@@ -1,11 +1,11 @@
-                      -- Design Document for Clique --
+                                                              -- Design Document for Clique --
+                                        
+                                                                -- (Current) Technologies --
+                                        
+                                                  Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
 
-                        -- (Current) Technologies --
-
-          Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
-
-                              -- Features --
-
+                              
+**Features:**
 Unique User Accounts
 Friends List
 Direct Chat
@@ -18,8 +18,6 @@ Voting system to add additional users to Cliques
       Use Google Identity API and/or Facebook Login API for authentication
 
                              -- User Stories --
-
--
 
                                 User Account
 Size: Medium
