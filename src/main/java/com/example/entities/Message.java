@@ -46,4 +46,9 @@ public class Message {
         this.id = id;
         this.message = message;
     }
+
+    public Message(String message, User user) {
+        this.message = message;
+        this.user = user;
+    }
 }
