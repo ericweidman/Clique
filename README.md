@@ -1,5 +1,6 @@
                                           -- Design Document for Clique --
-
+                                              Created by Eric Weidman 
+                                          
 **Features:**  
 Unique User Accounts  
 Friends List  
