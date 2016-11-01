@@ -43,7 +43,7 @@ Users can upload a profile picture
 
 **Friends List**:  
 
-The user can add others to their friends list, users can than manage
+The user can add others to their friends list, users can then manage
 their friends list.
 
 Size: Small
