@@ -45,7 +45,10 @@ public class CliqueController {
 
         User user = users.findByUserName(newUser.getUserName());
         if (user == null) {
-            user = new User(newUser.getUserName(), PasswordStorage.createHash(newUser.getPassword()));
+            user = new User(newUser.getUserName(), newUser.getEmail(),
+                    PasswordStorage.createHash(newUser.getPassword()),
+                    newUser.getFirstName(), newUser.getLastName(), "default");
+
             users.save(user);
             session.setAttribute("userName", newUser.getUserName());
             return "redirect:/home.html";
