@@ -5,7 +5,7 @@
                               Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
 
                               
-**Features:**
+**Features:**  
 *Unique User Accounts  
 *Friends List  
 *Direct Chat  
@@ -29,14 +29,14 @@ choose to upload a profile picture.
 Assumptions:
 The user has a valid e-mail address
 
-Acceptance:
-Users are assigned a UUID
-Passwords are hashed properly
-Users can create a unique username
-Users can update their account name
-Users can update their e-mail address
-Users can update their password
-Users can upload a profile picture
+Acceptance:  
+Users are assigned a UUID  
+Passwords are hashed properly  
+Users can create a unique username  
+Users can update their account name  
+Users can update their e-mail address  
+Users can update their password  
+Users can upload a profile picture  
 
 --
 
@@ -49,10 +49,10 @@ their friends list.
 Assumptions:
 The user has an account, there are other users to add
 
-Acceptance:
-Users can view all added friends
-Users can add friends either by username or email address
-Users can remove friends
+Acceptance:  
+Users can view all added friends  
+Users can add friends either by username or email address  
+Users can remove friends  
 
 --
 
@@ -64,11 +64,11 @@ The user can send messages directly to friends.
 Assumptions:
 The user has added another user to their friends list
 
-Acceptance:
-Messages can only be viewed by assumed two users
-The latest 50 messages from the conversation will be displayed
-Older messages will be archived
-Timestamps are stored and displayed
+Acceptance:  
+Messages can only be viewed by assumed two users  
+The latest 50 messages from the conversation will be displayed  
+Older messages will be archived  
+Timestamps are stored and displayed  
 
 --
 
@@ -87,14 +87,14 @@ a clique approve.
 Assumptions:
 The user has a friend to add to their clique
 
-Acceptance:
-User can have 1 unique clique active at a time
-User can terminate their clique at any time and create another
-User can be invited to join up to 2 cliques created by other users
-Users can join a clique only if 75% of a cliques users approve
-The first invite sent by a clique is always approved
-Messages can be viewed by all users
-Messages will be timestamped
-Messages from the past 24 hours will be displayed
+Acceptance:  
+User can have 1 unique clique active at a time  
+User can terminate their clique at any time and create another  
+User can be invited to join up to 2 cliques created by other users  
+Users can join a clique only if 75% of a cliques users approve  
+The first invite sent by a clique is always approved  
+Messages can be viewed by all users  
+Messages will be timestamped  
+Messages from the past 24 hours will be displayed  
 
 
