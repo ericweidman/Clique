@@ -1,0 +1,42 @@
+
+
+Start writing index.html, create a basic framework for a landing page.
+CSS Styling. There is always something to style.
+Wire up index.html to send account creation information to my /create-user route.
+The last step means you gotta figure out javascript or jquery or some shit.
+
+--
+
+Create home.html.
+More CSS Styling.
+Have your /create-user and /login POST routes redirect to home.html.
+Wire up javascript.
+
+--
+
+Start your direct message feature. Use things learned here to work on main chat feature later.
+Stop over thinking how many-to-many's work. Idiot.
+Style the shit out of all of it.
+
+--
+
+Figure out wtf a favicon is. Frontend devs come up with stupid names for stuff.
+Create favicon.
+Figure out how to implement said favicon (I think it should be easy).
+
+--
+
+Figure out domain name situation and make a decision.
+Look for a java webhost?
+Create 404.
+You thought you were done with CSS. You aren't.
+
+--
+
+MANY MORE THINGS.
+GET IT DONE.
+
+--
+
+Jerk.
+
