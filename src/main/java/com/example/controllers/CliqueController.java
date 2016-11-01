@@ -8,6 +8,8 @@ import com.example.utils.PasswordStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by ericweidman on 10/31/16.
  */
@@ -24,10 +26,8 @@ public class CliqueController {
     FriendRepository friends;
 
 
-
-
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
-    public String createUser(@RequestBody User newUser) throws Exception {
+    public User createUser(@RequestBody User newUser) throws Exception {
 
         if (newUser.getUserName() == null) {
             throw new Exception("Username cannot be blank");
@@ -47,20 +47,43 @@ public class CliqueController {
         }
     }
 
-    @RequestMapping(path = "/edit-user", method = RequestMethod.PUT)
-    public String editUser(String newUserName) {
+    @RequestMapping(path = "/login", method = RequestMethod.POST)
+    public String loginUser(@RequestBody User loginAttempt, HttpSession session) {
 
-        return null;
+        User user = users.findByUserName(loginAttempt.getUserName());
+
+
+        session.setAttribute("userName", loginAttempt.getUserName());
+        return "Authenticated";
 
     }
 
-    @RequestMapping(path = "/delete_user", method = RequestMethod.DELETE)
+
+    @RequestMapping(path = "/edit-user", method = RequestMethod.PUT)
+    public void editUser(String newUserName) {
+
+
+    }
+
+    @RequestMapping(path = "/delete-user{id}", method = RequestMethod.DELETE)
     public void deleteUser(@PathVariable("id") int id) {
         users.delete(id);
     }
 
+    @RequestMapping(path = "add-friend", method = RequestMethod.POST)
+    public void addFriend(@PathVariable int id, Boolean friend, HttpSession session) {
 
 
+    }
 
+    @RequestMapping(path = "remove-friend", method = RequestMethod.POST)
+    public void removeFriend(@PathVariable int id, Boolean friend, HttpSession session) {
+
+    }
+
+    @RequestMapping(path = "/logout", method = RequestMethod.POST)
+    public void logout(HttpSession session) {
+        session.invalidate();
+    }
 
 }

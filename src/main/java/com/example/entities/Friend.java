@@ -15,6 +15,9 @@ public class Friend {
     @GeneratedValue
     private int id;
 
+    @ManyToOne
+    User user;
+
     private boolean isFriend;
 
     public Friend() {

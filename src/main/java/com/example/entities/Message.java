@@ -19,6 +19,10 @@ public class Message {
     @Column(nullable = false)
     private String message;
 
+    @ManyToOne
+    User user;
+
+
     public Message() {
     }
 
