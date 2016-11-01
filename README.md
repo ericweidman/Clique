@@ -92,6 +92,7 @@ Messages can be viewed by all users
 Messages will be timestamped  
 Messages from the past 24 hours will be displayed  
 
+
                                                    -- Road Map --
                     
                           Use Google Identity API and/or Facebook Login API for authentication
