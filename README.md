@@ -10,7 +10,6 @@ Unique User Accounts
 Friends List  
 Direct Chat  
 User Created Cliques (chatrooms)  
-Voting system to add additional users to Cliques  
 
 
                                                    -- Road Map --
@@ -20,7 +19,7 @@ Voting system to add additional users to Cliques
 
 
                     
-**User Account**:  
+**Unique User Account**:  
 
 The user will need to provide a valid e-mail address and password
 in order to create an account. The user can then update this information, and
@@ -76,7 +75,7 @@ Timestamps are stored and displayed
 
 --
 
-**User created Cliques**:  
+**User created Cliques (chatrooms)**:  
 (This section needs to be broken into smaller sections with greater detail)
 
 User can create 1 personal clique and can be invited to join 2 additional
