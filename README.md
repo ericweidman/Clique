@@ -1,5 +1,5 @@
                                           -- Design Document for Clique --
-                                              Created by Eric Weidman 
+                                               Created by Eric Weidman 
                                           
 **Features:**  
 Unique User Accounts  
@@ -9,7 +9,6 @@ User Created Cliques (chatrooms)
 
                     
                                             -- (Current) Technologies --
-                    
                               Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
                    
 **Unique User Account**:  
@@ -97,5 +96,6 @@ Messages from the past 24 hours will be displayed
                     
                           Use Google Identity API and/or Facebook Login API for authentication
                         Users who decide to terminate thier clique can be kicked by vote instead
+                                       Native Desktop and/or Phone Applications
 
 
