@@ -1,8 +1,8 @@
-                                                              -- Design Document for Clique --
-                                        
-                                                                -- (Current) Technologies --
-                                        
-                                                  Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
+                                                      -- Design Document for Clique --
+                                
+                                                        -- (Current) Technologies --
+                                
+                                          Java - Spring/Hibernate - Postgres - HTML - Javascript - CSS
 
                               
 **Features:**
