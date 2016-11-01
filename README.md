@@ -21,11 +21,12 @@ Voting system to add additional users to Cliques
 
                     
 **User Account**:  
-Size: Medium
 
 The user will need to provide a valid e-mail address and password
 in order to create an account. The user can then update this information, and
 choose to upload a profile picture.
+
+Size: Medium
 
 Assumptions:  
 The user has a valid e-mail address
@@ -42,10 +43,11 @@ Users can upload a profile picture
 --
 
 **Friends List**:  
-Size: Small
 
 The user can add others to their friends list, users can than manage
 their friends list.
+
+Size: Small
 
 Assumptions:  
 The user has an account, there are other users to add
@@ -58,9 +60,10 @@ Users can remove friends
 --
 
 **Direct Chat**:  
-Size: Small
 
 The user can send messages directly to friends.
+
+Size: Small
 
 Assumptions:  
 The user has added another user to their friends list
@@ -76,14 +79,14 @@ Timestamps are stored and displayed
 **User created Cliques**:  
 (This section needs to be broken into smaller sections with greater detail)
 
-Size: Large
-
 User can create 1 personal clique and can be invited to join 2 additional
 cliques. The user can recover their unique clique and create another
 but they must terminate their clique to do so. User can opt to
 leave their friends clique at any time.
 Invites to cliques will only extended to users if a majority of the users in
 a clique approve.
+
+Size: Large
 
 Assumptions:  
 The user has a friend to add to their clique
