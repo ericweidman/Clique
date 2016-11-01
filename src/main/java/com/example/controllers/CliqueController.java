@@ -19,7 +19,6 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class CliqueController {
 
-
     @Autowired
     UserRepository users;
     @Autowired
@@ -28,7 +27,6 @@ public class CliqueController {
     FriendRepository friends;
     @Autowired
     CliqueRepository clique;
-
 
     //////////////////////
     //USER ACCOUNT ROUTES
