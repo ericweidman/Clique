@@ -9,6 +9,9 @@ import com.example.services.UserRepository;
 import com.example.utils.PasswordStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+
 import javax.servlet.http.HttpSession;
 
 /**
@@ -32,7 +35,8 @@ public class CliqueController {
     /////////////////////
 
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
-    public void createUser(@RequestBody User newUser, HttpSession session) throws Exception {
+    public String createUser(@RequestBody User newUser, HttpSession session) throws Exception {
+
 
         if (newUser.getUserName() == null) {
             throw new Exception("Username cannot be blank");
@@ -48,10 +52,13 @@ public class CliqueController {
 
             users.save(user);
             session.setAttribute("userName", newUser.getUserName());
+            return "redirect:/home.html";
+
         } else {
             throw new Exception("Username already taken");
         }
     }
+
 
 
 

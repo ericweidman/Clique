@@ -14,15 +14,18 @@ function newUser(user){
     data: JSON.stringify(user),
     success: function(data){
       console.log('user added!', data);
+      alert("Success!");
 
     },
     error: function(error){
       console.log("Add User", error);
+      alert("Fail!");
     }
   });
 }
 
 $('#newUser').submit(function(event){
+  event.preventDefault();
   var user = {};
   user.userName = $('input[name=userName]').val();
   user.email = $('input[name=email]').val();
