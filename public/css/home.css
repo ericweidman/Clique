@@ -1,0 +1,63 @@
+.center1 {
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  top: 33%;
+  left: 10%;
+  margin-left: -45px;
+  margin-top: -25px;
+}
+.form1{
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  top: 66%;
+  left: 14%;
+  margin-left: -58px;
+  margin-top: -25px;
+
+}
+.center2 {
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  top: 33%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+
+.form2{
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  top: 66%;
+  left: 54%;
+  margin-left: -37px;
+  margin-top: -25px;
+
+}
+
+
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:550px;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+
+    #chatbox2 {
+        text-align:left;
+        margin:0 auto;
+        margin-bottom:25px;
+        padding:10px;
+        background:#fff;
+        height:270px;
+        width:430px;
+        border:1px solid #ACD8F0;
+        overflow:auto; }
