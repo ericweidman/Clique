@@ -53,11 +53,7 @@ public class CliqueController {
             session.setAttribute("userName", newUser.getUserName());
 
 
-        } else {
-            throw new Exception("Username already taken");
         }
-        return;
-
     }
 
 
@@ -165,9 +161,10 @@ public class CliqueController {
     }
 
     @RequestMapping(path = "/email", method = RequestMethod.GET, produces = "application/json")
-    public String hitThisShit() {
+    public String hitThisShit(HttpSession session) {
 
-        return "I SHOULD BE READING THIS TEXT";
+        String userName = (String) session.getAttribute("userName");
+        return userName;
     }
 
 }

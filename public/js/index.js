@@ -14,7 +14,6 @@ function newUser(user){
     data: JSON.stringify(user),
     success: function(data){
       console.log('user added!', data);
-      alert("Success!");
       window.location.replace("home.html");
 
     },
