@@ -1,7 +1,8 @@
 var jscon={
 
 urls:{
-  newUser: '/create-user'
+  newUser: '/create-user',
+  login: 'login'
   }
 };
 
@@ -10,7 +11,6 @@ function newUser(user){
     url: jscon.urls.newUser,
     method: "POST",
     contentType: 'application/json; charset=utf-8',
-    //dataType: 'json',
     data: JSON.stringify(user),
     success: function(data){
       console.log('user added!', data);
@@ -32,5 +32,31 @@ $('#newUser').submit(function(event){
   user.password = $('input[name=password]').val();
   user.firstName = $('input[name=firstName]').val();
   user.lastName = $('input[name=lastName]').val();
+  newUser(user);
+});
+
+
+function login(user){
+  $.ajax({
+    url: jscon.urls.login,
+    method: "POST",
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify(user),
+    success: function(data){
+      console.log('user in', data);
+      window.location.replace("home.html");
+
+    },
+    error: function(error){
+      alert("Fail!");
+    }
+  });
+}
+
+$('#login').submit(function(event){
+  event.preventDefault();
+  var user = {};
+  user.userName = $('input[name=userName]').val();
+  user.password = $('input[name=password]').val();
   newUser(user);
 });

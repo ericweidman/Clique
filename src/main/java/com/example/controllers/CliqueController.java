@@ -74,12 +74,24 @@ public class CliqueController {
     /////////////////////
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
-    public String loginUser(@RequestBody User loginAttempt, HttpSession session) {
+    public void loginUser(@RequestBody User loginAttempt, HttpSession session) throws Exception {
 
         User user = users.findByUserName(loginAttempt.getUserName());
 
-        session.setAttribute("userName", loginAttempt.getUserName());
-        return "redirect:/home.html";
+        if (loginAttempt.getUserName() == null) {
+            throw new Exception("Username cannot be blank");
+        }
+        if (loginAttempt.getPassword() == null) {
+            throw new Exception("Password cannot be blank");
+        }
+        if (loginAttempt.getUserName().equals(user.getUserName()) &&
+                PasswordStorage.verifyPassword(loginAttempt.getPassword(), user.getPassword())) {
+            session.setAttribute("userName", loginAttempt.getUserName());
+
+        }else{
+            throw new Exception("Well fuck.");
+        }
+
 
     }
 
