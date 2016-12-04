@@ -57,6 +57,7 @@ public class CliqueController {
             throw new Exception("Username already taken");
         }
         return;
+
     }
 
 
