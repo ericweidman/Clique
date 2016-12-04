@@ -10,11 +10,12 @@ function newUser(user){
     url: jscon.urls.newUser,
     method: "POST",
     contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
+    //dataType: 'json',
     data: JSON.stringify(user),
     success: function(data){
       console.log('user added!', data);
       alert("Success!");
+      window.location.replace("home.html");
 
     },
     error: function(error){

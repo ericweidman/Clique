@@ -34,7 +34,7 @@ public class CliqueController {
     /////////////////////
 
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
-    public String createUser(@RequestBody User newUser, HttpSession session) throws Exception {
+    public void createUser(@RequestBody User newUser, HttpSession session) throws Exception {
 
 
         if (newUser.getUserName() == null) {
@@ -51,11 +51,12 @@ public class CliqueController {
 
             users.save(user);
             session.setAttribute("userName", newUser.getUserName());
-            return "redirect:/home.html";
+
 
         } else {
             throw new Exception("Username already taken");
         }
+        return;
     }
 
 
@@ -140,15 +141,15 @@ public class CliqueController {
     //This code is going to need to be changed drastically.
     //Currently does not save who message was sent to.
 
-    public void saveMessage(HttpSession session, String message) throws Exception {
+    public void saveMessage(HttpSession session, @RequestBody Message message) throws Exception {
         String userName = (String) session.getAttribute("userName");
         if (userName == null) {
-            throw new Exception("You must be logged in to send messages");
-        }
-        User user = users.findByUserName(userName);
-        Message newMessage = new Message(message, user);
+           throw new Exception("You must be logged in to send messages");
+       }
+        //User user = users.findByUserName(userName);
+        //Message newMessage = new Message(message, user);
 
-        messages.save(newMessage);
+        messages.save(message);
     }
 
     /////////////////
@@ -162,6 +163,11 @@ public class CliqueController {
             throw new Exception("You must be logged in to chat");
         }
 
+    }
+    @RequestMapping(path = "/email", method = RequestMethod.GET, produces = "application/json")
+    public String hitThisShit(){
+
+       return "I SHOULD BE READING THIS TEXT";
     }
 
 }
