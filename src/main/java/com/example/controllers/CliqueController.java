@@ -60,8 +60,6 @@ public class CliqueController {
     }
 
 
-
-
     @RequestMapping(path = "/edit-user{id}", method = RequestMethod.PUT)
     public void editUser(@PathVariable("id") int id, String newUserName) {
         //Needs to accept any and all personal information changes.
@@ -144,8 +142,8 @@ public class CliqueController {
     public void saveMessage(HttpSession session, @RequestBody Message message) throws Exception {
         String userName = (String) session.getAttribute("userName");
         if (userName == null) {
-           throw new Exception("You must be logged in to send messages");
-       }
+            throw new Exception("You must be logged in to send messages");
+        }
         //User user = users.findByUserName(userName);
         //Message newMessage = new Message(message, user);
 
@@ -156,18 +154,19 @@ public class CliqueController {
     //CLIQUE ROUTES
     ////////////////
 
-    @RequestMapping(path ="/clique-message", method = RequestMethod.POST)
+    @RequestMapping(path = "/clique-message", method = RequestMethod.POST)
     public void cliqueMessage(HttpSession session, String message) throws Exception {
         String userName = (String) session.getAttribute("userName");
-        if (userName == null){
+        if (userName == null) {
             throw new Exception("You must be logged in to chat");
         }
 
     }
-    @RequestMapping(path = "/email", method = RequestMethod.GET, produces = "application/json")
-    public String hitThisShit(){
 
-       return "I SHOULD BE READING THIS TEXT";
+    @RequestMapping(path = "/email", method = RequestMethod.GET, produces = "application/json")
+    public String hitThisShit() {
+
+        return "I SHOULD BE READING THIS TEXT";
     }
 
 }
