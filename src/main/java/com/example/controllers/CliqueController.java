@@ -71,7 +71,6 @@ public class CliqueController {
     @RequestMapping(path = "/logout", method = RequestMethod.POST)
     public void logout(HttpSession session) {
         session.invalidate();
-        //request.getSession().invalidate();
 
     }
 
