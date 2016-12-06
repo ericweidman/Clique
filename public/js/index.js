@@ -2,7 +2,7 @@ var jscon={
 
 urls:{
   newUser: '/create-user',
-  login: 'login'
+  login: '/login'
   }
 };
 
@@ -13,12 +13,12 @@ function newUser(user){
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(user),
     success: function(data){
-      console.log('user added!', data);
       window.location.replace("home.html");
 
     },
     error: function(error){
       console.log("Add User", error);
+      console.log(user);
       alert("Fail!");
     }
   });
@@ -35,7 +35,6 @@ $('#newUser').submit(function(event){
   newUser(user);
 });
 
-
 function login(user){
   $.ajax({
     url: jscon.urls.login,
@@ -43,12 +42,13 @@ function login(user){
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(user),
     success: function(data){
-      console.log('user in', data);
+      console.log("user in", data);
       window.location.replace("home.html");
 
     },
     error: function(error){
-      alert("Fail!");
+      console.log(error);
+      alert("Invalid credentials");
     }
   });
 }
@@ -56,7 +56,7 @@ function login(user){
 $('#login').submit(function(event){
   event.preventDefault();
   var user = {};
-  user.userName = $('input[name=userName]').val();
-  user.password = $('input[name=password]').val();
-  newUser(user);
+  user.userName = $('input[name=luserName]').val();
+  user.password = $('input[name=lpassword]').val();
+  login(user);
 });

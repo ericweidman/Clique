@@ -2,10 +2,16 @@ var jscon = {
 
     urls: {
         newMessage: '/save-message',
-        target: '/email',
+        target: '/getname',
         logout: '/logout'
     }
 };
+
+// $.get('/user', function(data) {
+//   console.log(data);
+//   document.createElement('h1').innerHTML = "Welcome " + data.userName + "!";
+//   return data;
+// });
 
 function newMessage(message) {
     $.ajax({
@@ -35,26 +41,27 @@ $('#newMessage').submit(function(event) {
 });
 
 $('#logout').click(function() {
-$.ajax({
-    url: jscon.urls.logout,
-    method: "POST",
-    success: function(data) {
-        window.location.replace("index.html");
-      },
-      error: function(error){
-        console.log(error);
-        alert("Fail!");
-      }
+    $.ajax({
+        url: jscon.urls.logout,
+        method: "POST",
+        success: function(data) {
+            window.location.replace("index.html");
+            //alert("Success!")
+        },
+        error: function(error) {
+            console.log(error);
+            alert("Fail!");
+        }
     });
-  })
-
-
+})
 
 $("#target").click(function() {
+  event.preventDefault();
     $.ajax({
         url: jscon.urls.target,
         method: "GET",
         dataType: 'text',
+        data: ' ',
         success: function(data) {
             alert(data);
         },

@@ -9,6 +9,10 @@
 
 }
 
+.left {
+  position: absolute;
+}
+
 div#fixedheader {
     position: fixed;
     text-align: center;
