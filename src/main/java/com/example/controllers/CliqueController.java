@@ -30,10 +30,6 @@ public class CliqueController {
     @Autowired
     CliqueRepository clique;
 
-    //////////////////////
-    //USER ACCOUNT ROUTES
-    /////////////////////
-
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
     public void createUser(@RequestBody User newUser, HttpSession session) throws Exception {
 
