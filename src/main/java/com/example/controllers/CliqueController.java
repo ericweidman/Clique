@@ -82,5 +82,18 @@ public class CliqueController {
         return new User(user.getUserName(), user.getEmail(), user.getFirstName(), user.getLastName());
 
     }
+
+    @RequestMapping(path = "/remove", method = RequestMethod.DELETE)
+    public void remove(@RequestBody User user, HttpSession session) throws Exception {
+
+        User curUser = users.findByUserName((String) session.getAttribute("userName"));
+        int del = curUser.getId();
+        if(PasswordStorage.verifyPassword(user.getPassword(), curUser.getPassword())){
+            session.invalidate();
+            users.delete(del);
+        }else{
+            throw new Exception("Password do not match!");
+        }
+    }
 }
 

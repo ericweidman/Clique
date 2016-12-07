@@ -14,7 +14,6 @@ function newUser(user){
     data: JSON.stringify(user),
     success: function(data){
       window.location.replace("home.html");
-
     },
     error: function(error){
       console.log("Add User", error);
@@ -44,7 +43,6 @@ function login(user){
     success: function(data){
       console.log("user in", data);
       window.location.replace("home.html");
-
     },
     error: function(error){
       console.log(error);

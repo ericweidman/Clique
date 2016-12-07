@@ -2,7 +2,8 @@ var jscon = {
 
     urls: {
         logout: '/logout',
-        back: '/back'
+        back: '/back',
+        remove: '/remove'
     }
 };
 
@@ -31,3 +32,30 @@ $('#back').click(function() {
         }
     });
 })
+
+function remove(user) {
+    $.ajax({
+        url: jscon.urls.remove,
+        method: "DELETE",
+        contentType: 'application/json; charset=utf-8',
+        data: JSON.stringify(user),
+        success: function(){
+          window.location.replace("index.html");
+        },
+        error: function(error) {
+            alert("Fail!");
+        }
+    });
+}
+
+$('#remove').click(function() {
+  event.preventDefault();
+  var user = {};
+  var r = confirm("Do you really wish to delete your account?")
+  if(r == true){
+    user.password = prompt("Enter your password to delete your account. This cannot be undone.");
+    remove(user);
+  }else{
+    alert("Thanks, jerk.");
+  }
+});

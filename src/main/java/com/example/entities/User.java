@@ -60,6 +60,8 @@ public class User {
         this.id = id;
     }
 
+
+
     public User(String userName) {
         this.userName = userName;
     }
@@ -73,6 +75,7 @@ public class User {
         this.userName = userName;
         this.password = password;
     }
+
 
     public String getUserName() {
         return userName;
