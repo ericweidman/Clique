@@ -1,0 +1,34 @@
+body {
+    overflow: hidden;
+    text-align: center;
+    background-color: #CCC;
+    margin: 80px 80px 100px 100px;
+}
+
+.left {
+  position: absolute;
+}
+
+div#fixedheader {
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: #CCC;
+    background: #333;
+    padding: 25px;
+    font-size: 20px;
+}
+
+div#fixedfooter {
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: #CCC;
+    background: #332;
+    padding: 8px;
+    font-size: 17px;
+}

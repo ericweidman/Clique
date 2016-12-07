@@ -7,12 +7,6 @@ var jscon = {
     }
 };
 
-// $.get('/user', function(data) {
-//   console.log(data);
-//   document.createElement('h1').innerHTML = "Welcome " + data.userName + "!";
-//   return data;
-// });
-
 function newMessage(message) {
     $.ajax({
         url: jscon.urls.newMessage,
@@ -61,7 +55,7 @@ $("#target").click(function() {
         url: jscon.urls.target,
         method: "GET",
         dataType: 'text',
-        data: ' ',
+        //data: ' ',
         success: function(data) {
             alert(data);
         },
