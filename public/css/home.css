@@ -13,7 +13,7 @@
   height: 50px;
   top: 66%;
   left: 14%;
-  margin-left: -58px;
+  margin-left: -121px;
   margin-top: -25px;
 
 }
@@ -33,7 +33,7 @@
   height: 50px;
   top: 66%;
   left: 54%;
-  margin-left: -37px;
+  margin-left: -102px;
   margin-top: -25px;
 
 }
@@ -67,9 +67,6 @@
         margin: 80px 80px 100px 100px;
     }
 
-    .left {
-      position: absolute;
-    }
 
     div#fixedheader {
         position: fixed;
