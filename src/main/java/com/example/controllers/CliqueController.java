@@ -45,7 +45,6 @@ public class CliqueController {
 
             users.save(newUser);
             session.setAttribute("userName", newUser.getUserName());
-
         }
     }
 
@@ -61,7 +60,6 @@ public class CliqueController {
         } else {
             session.setAttribute("userName", login.getUserName());
         }
-
     }
 
     @RequestMapping(path = "/logout", method = RequestMethod.POST)
@@ -72,9 +70,17 @@ public class CliqueController {
 
     @RequestMapping(path = "/getname", method = RequestMethod.GET)
     public String hitThisShit(HttpSession session) {
-        String username = (String) session.getAttribute("userName");
-        User user = users.findByUserName(username);
+        String userName = (String) session.getAttribute("userName");
+        User user = users.findByUserName(userName);
         return user.getUserName();
+    }
+
+    @RequestMapping(path = "/account-load", method = RequestMethod.GET)
+    public User passUser(HttpSession session) {
+        String userName = (String) session.getAttribute("userName");
+        User user = users.findByUserName(userName);
+        return new User(user.getUserName(), user.getEmail(), user.getFirstName(), user.getLastName());
+
     }
 }
 

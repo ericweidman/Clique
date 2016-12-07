@@ -3,7 +3,8 @@ var jscon = {
     urls: {
         newMessage: '/save-message',
         target: '/getname',
-        logout: '/logout'
+        logout: '/logout',
+        account: '/account-load'
     }
 };
 
@@ -40,7 +41,6 @@ $('#logout').click(function() {
         method: "POST",
         success: function(data) {
             window.location.replace("index.html");
-            //alert("Success!")
         },
         error: function(error) {
             console.log(error);
@@ -50,16 +50,29 @@ $('#logout').click(function() {
 })
 
 $("#target").click(function() {
-  event.preventDefault();
     $.ajax({
         url: jscon.urls.target,
         method: "GET",
         dataType: 'text',
-        //data: ' ',
         success: function(data) {
             alert(data);
         },
         error: function(error) {
+            console.log(error);
+            alert("Fail!");
+        }
+    });
+});
+
+$("#account").click(function() {
+    $.ajax({
+        url: jscon.urls.account,
+        method: "GET",
+        dataType: "json",
+        success: function(data) {
+            window.location.replace("account.html");
+        },
+        error: function(data) {
             console.log(error);
             alert("Fail!");
         }

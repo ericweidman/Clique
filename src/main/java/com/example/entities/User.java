@@ -49,6 +49,13 @@ public class User {
         this.imgLoc = imgLoc;
     }
 
+    public User(String userName, String email, String firstName, String lastName){
+        this.userName = userName;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public User(int id) {
         this.id = id;
     }

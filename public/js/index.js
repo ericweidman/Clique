@@ -1,9 +1,9 @@
-var jscon={
+var jscon = {
 
-urls:{
-  newUser: '/create-user',
-  login: '/login'
-  }
+    urls: {
+        newUser: '/create-user',
+        login: '/login'
+    }
 };
 
 function newUser(user){
