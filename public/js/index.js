@@ -40,6 +40,7 @@ function login(user){
     method: "POST",
     contentType: 'application/json; charset=utf-8',
     data: JSON.stringify(user),
+    dataType:  'text',
     success: function(data){
       console.log("user in", data);
       window.location.replace("home.html");
@@ -57,4 +58,6 @@ $('#login').submit(function(event){
   user.userName = $('input[name=luserName]').val();
   user.password = $('input[name=lpassword]').val();
   login(user);
+
+
 });

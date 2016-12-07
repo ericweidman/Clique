@@ -75,6 +75,13 @@ public class User {
         this.password = password;
     }
 
+    public String getImgLoc() {
+        return imgLoc;
+    }
+
+    public void setImgLoc(String imgLoc) {
+        this.imgLoc = imgLoc;
+    }
 
     public String getUserName() {
         return userName;

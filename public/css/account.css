@@ -6,7 +6,7 @@ body {
 }
 
 .left {
-  position: absolute;
+    position: absolute;
 }
 
 div#fixedheader {
@@ -31,4 +31,15 @@ div#fixedfooter {
     background: #332;
     padding: 8px;
     font-size: 17px;
+}
+
+div#photo1 {
+  position: fixed;
+  text-align: center;
+  margin-right: auto;
+  left: 44%;
+  bottom: 50%;
+  display: block;
+
+
 }

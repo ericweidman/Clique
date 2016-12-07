@@ -31,7 +31,7 @@ public class CliqueController {
     CliqueRepository clique;
 
     @RequestMapping(path = "/create-user", method = RequestMethod.POST)
-    public void createUser(@RequestBody User newUser, HttpSession session) throws Exception {
+    public String createUser(@RequestBody User newUser, HttpSession session) throws Exception {
 
         if (newUser.getUserName().equals(users.findByUserName(newUser.getUserName()))) {
             throw new Exception("Username in use");
@@ -41,15 +41,16 @@ public class CliqueController {
             throw new Exception("Password cannot be blank");
         } else {
             newUser = new User(newUser.getUserName(), newUser.getEmail(),
-                    PasswordStorage.createHash(newUser.getPassword()), newUser.getFirstName(), newUser.getLastName(), "Def");
+                    PasswordStorage.createHash(newUser.getPassword()), newUser.getFirstName(), newUser.getLastName(), "default.jpg");
 
             users.save(newUser);
             session.setAttribute("userName", newUser.getUserName());
+            return newUser.getUserName();
         }
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
-    public void loginUser(@RequestBody User login, HttpSession session) throws Exception {
+    public String loginUser(@RequestBody User login, HttpSession session) throws Exception {
 
         User user = users.findByUserName(login.getUserName());
 
@@ -59,6 +60,7 @@ public class CliqueController {
             throw new Exception("Invalid password");
         } else {
             session.setAttribute("userName", login.getUserName());
+            return login.getUserName();
         }
     }
 
@@ -95,5 +97,13 @@ public class CliqueController {
             throw new Exception("Password do not match!");
         }
     }
-}
 
+    @RequestMapping(path = "addphoto", method = RequestMethod.PUT)
+    public void addPhoto(@RequestBody User user, HttpSession session){
+
+        String curUser = (String) session.getAttribute("userName");
+        User update = users.findByUserName(curUser);
+        update.setImgLoc("image/" + user.getImgLoc());
+        users.save(update);
+        }
+    }

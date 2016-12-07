@@ -55,8 +55,7 @@ $("#target").click(function() {
         method: "GET",
         dataType: 'text',
         success: function(data) {
-          
-            alert(data);
+            alert(data)
         },
         error: function(error) {
             console.log(error);

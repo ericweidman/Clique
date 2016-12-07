@@ -3,7 +3,8 @@ var jscon = {
     urls: {
         logout: '/logout',
         back: '/back',
-        remove: '/remove'
+        remove: '/remove',
+        addphoto: 'addphoto'
     }
 };
 
@@ -39,8 +40,8 @@ function remove(user) {
         method: "DELETE",
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify(user),
-        success: function(){
-          window.location.replace("index.html");
+        success: function() {
+            window.location.replace("index.html");
         },
         error: function(error) {
             alert("Fail!");
@@ -49,13 +50,29 @@ function remove(user) {
 }
 
 $('#remove').click(function() {
-  event.preventDefault();
-  var user = {};
-  var r = confirm("Do you really wish to delete your account?")
-  if(r == true){
-    user.password = prompt("Enter your password to delete your account. This cannot be undone.");
-    remove(user);
-  }else{
-    alert("Thanks, jerk.");
-  }
+    event.preventDefault();
+    var user = {};
+    var r = confirm("Do you really wish to delete your account?")
+    if (r == true) {
+        user.password = prompt("Enter your password to delete your account. This cannot be undone.");
+        remove(user);
+    } else {
+        alert("Thanks, jerk.");
+    }
 });
+
+// function addphoto(user) {
+//     $.ajax({
+//         url: jscon.urls.remove,
+//         method: "PUT",
+//         contentType 'application/json; charset=utf-8',
+//         data: JSON.stringify(user),
+//         success: function() {
+//             window.location.replace("account.html");
+//         },
+//         error: function(error) {
+//             console.log(error);
+//             alert("Fail!");
+//         }
+//     });
+//}
