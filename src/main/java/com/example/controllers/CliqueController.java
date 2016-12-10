@@ -90,20 +90,31 @@ public class CliqueController {
 
         User curUser = users.findByUserName((String) session.getAttribute("userName"));
         int del = curUser.getId();
-        if(PasswordStorage.verifyPassword(user.getPassword(), curUser.getPassword())){
+        if (PasswordStorage.verifyPassword(user.getPassword(), curUser.getPassword())) {
             session.invalidate();
             users.delete(del);
-        }else{
+        } else {
             throw new Exception("Password do not match!");
         }
     }
 
-    @RequestMapping(path = "addphoto", method = RequestMethod.PUT)
-    public void addPhoto(@RequestBody User user, HttpSession session){
+    @RequestMapping(path = "/addphoto", method = RequestMethod.PUT)
+    public void addPhoto(@RequestBody User user, HttpSession session) {
 
         String curUser = (String) session.getAttribute("userName");
         User update = users.findByUserName(curUser);
         update.setImgLoc("image/" + user.getImgLoc());
         users.save(update);
-        }
     }
+
+
+    @RequestMapping(path = "/page-load", method = RequestMethod.GET)
+    public User getUser(HttpSession session) {
+
+        String userName = (String) session.getAttribute("userName");
+        User user = users.findByUserName(userName);
+        return user;
+
+
+    }
+}

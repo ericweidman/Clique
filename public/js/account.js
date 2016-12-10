@@ -5,6 +5,7 @@ var jscon = {
         back: '/back',
         remove: '/remove',
         addphoto: 'addphoto'
+        accountload: 'account-load'
     }
 };
 
@@ -61,18 +62,22 @@ $('#remove').click(function() {
     }
 });
 
-// function addphoto(user) {
-//     $.ajax({
-//         url: jscon.urls.remove,
-//         method: "PUT",
-//         contentType 'application/json; charset=utf-8',
-//         data: JSON.stringify(user),
-//         success: function() {
-//             window.location.replace("account.html");
-//         },
-//         error: function(error) {
-//             console.log(error);
-//             alert("Fail!");
-//         }
-//     });
-//}
+$('account-load').ready(function(){
+  $.ajax({
+    url:jscon.urls.accountload,
+    method: "GET",
+    dataType: 'json',
+    success:function(data){
+      console.log(data);
+      var user = data;
+      var myDiv = document.getElementById('fixedheader');
+      console.log(myDiv);
+      myDiv.innerHTML = "Clique - Chat For " + user.firstName + " " + user.lastName;
+    },
+    error: function(data){
+      console.log(error);
+      console.log(data);
+      alert('Fail!');
+    }
+  });
+});

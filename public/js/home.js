@@ -2,9 +2,9 @@ var jscon = {
 
     urls: {
         newMessage: '/save-message',
-        target: '/getname',
         logout: '/logout',
-        account: '/account-load'
+        account: '/account-load',
+        pageload: 'page-load',
     }
 };
 
@@ -49,22 +49,8 @@ $('#logout').click(function() {
     });
 })
 
-$("#target").click(function() {
-    $.ajax({
-        url: jscon.urls.target,
-        method: "GET",
-        dataType: 'text',
-        success: function(data) {
-            alert(data)
-        },
-        error: function(error) {
-            console.log(error);
-            alert("Fail!");
-        }
-    });
-});
 
-$("#account").click(function() {
+$('#account').click(function() {
     $.ajax({
         url: jscon.urls.account,
         method: "GET",
@@ -77,4 +63,24 @@ $("#account").click(function() {
             alert("Fail!");
         }
     });
+});
+
+$('page-load').ready(function(){
+  $.ajax({
+    url:jscon.urls.pageload,
+    method: "GET",
+    dataType: 'json',
+    success:function(data){
+      console.log(data);
+      var user = data;
+      var myDiv = document.getElementById('fixedheader');
+      console.log(myDiv);
+      myDiv.innerHTML = "Clique - Chat For " + user.firstName + " " + user.lastName;
+    },
+    error: function(data){
+      console.log(error);
+      console.log(data);
+      alert('Fail!');
+    }
+  });
 });
