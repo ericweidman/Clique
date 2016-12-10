@@ -4,7 +4,7 @@ var jscon = {
         logout: '/logout',
         back: '/back',
         remove: '/remove',
-        addphoto: 'addphoto'
+        addphoto: 'addphoto',
         accountload: 'account-load'
     }
 };
@@ -68,10 +68,8 @@ $('account-load').ready(function(){
     method: "GET",
     dataType: 'json',
     success:function(data){
-      console.log(data);
       var user = data;
       var myDiv = document.getElementById('fixedheader');
-      console.log(myDiv);
       myDiv.innerHTML = "Clique - Chat For " + user.firstName + " " + user.lastName;
     },
     error: function(data){

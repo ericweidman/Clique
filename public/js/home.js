@@ -49,7 +49,6 @@ $('#logout').click(function() {
     });
 })
 
-
 $('#account').click(function() {
     $.ajax({
         url: jscon.urls.account,
