@@ -70,6 +70,8 @@ $('account-load').ready(function(){
     success:function(data){
       var user = data;
       var myDiv = document.getElementById('fixedheader');
+      var userDiv = document.getElementById('user');
+      userDiv.innerHTML = user.userName + "</br>" +  user.email; 
       myDiv.innerHTML = "Clique - Chat For " + user.firstName + " " + user.lastName;
     },
     error: function(data){

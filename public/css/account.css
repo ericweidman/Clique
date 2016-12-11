@@ -34,12 +34,22 @@ div#fixedfooter {
 }
 
 div#photo1 {
-  position: fixed;
-  text-align: center;
-  margin-right: auto;
-  left: 44%;
-  bottom: 50%;
-  display: block;
+    position: fixed;
+    text-align: center;
+    margin-right: auto;
+    left: 44%;
+    bottom: 50%;
+    display: block;
+}
 
+div#user {
+    position: fixed;
+    left: 46%;
+    top: 55%;
+}
 
+button#edit {
+    position: fixed;
+    left: 46%;
+    top: 61%;
 }

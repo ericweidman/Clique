@@ -114,7 +114,5 @@ public class CliqueController {
         String userName = (String) session.getAttribute("userName");
         User user = users.findByUserName(userName);
         return user;
-
-
     }
 }

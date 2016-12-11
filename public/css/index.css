@@ -11,6 +11,8 @@
 
 .left {
   position: absolute;
+  top: 15%;
+  left: 42%;
 }
 
 div#fixedheader {
