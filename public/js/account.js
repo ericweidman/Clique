@@ -4,8 +4,9 @@ var jscon = {
         logout: '/logout',
         back: '/back',
         remove: '/remove',
-        addphoto: 'addphoto',
-        accountload: 'account-load'
+        addphoto: '/addphoto',
+        accountload: '/account-load',
+        update: '/update'
     }
 };
 
@@ -71,7 +72,7 @@ $('account-load').ready(function(){
       var user = data;
       var myDiv = document.getElementById('fixedheader');
       var userDiv = document.getElementById('user');
-      userDiv.innerHTML = user.userName + "</br>" +  user.email; 
+      userDiv.innerHTML = user.userName + "</br>" +  user.email;
       myDiv.innerHTML = "Clique - Chat For " + user.firstName + " " + user.lastName;
     },
     error: function(data){
@@ -80,4 +81,31 @@ $('account-load').ready(function(){
       alert('Fail!');
     }
   });
+});
+
+
+function update(user){
+  $.ajax({
+    url: jscon.urls.update,
+    method: "PUT",
+    contentType: 'application/json; charset=utf-8',
+    data: JSON.stringify(user),
+    dataType:  'json',
+    success: function(data){
+      console.log("user in", data);
+      window.location.replace("account.html");
+    },
+    error: function(error){
+      console.log(error);
+      alert("Invalid credentials");
+    }
+  });
+}
+
+$('#update').submit(function(event){
+  event.preventDefault();
+  var user = {};
+  user.userName = $('input[name=userName]').val();
+  user.email = $('input[name=email]').val();
+  update(user);
 });

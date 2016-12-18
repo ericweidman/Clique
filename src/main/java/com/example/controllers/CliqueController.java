@@ -115,4 +115,14 @@ public class CliqueController {
         User user = users.findByUserName(userName);
         return user;
     }
+
+    @RequestMapping(path = "/update", method = RequestMethod.PUT)
+    public User editUser(HttpSession session, @RequestBody User thisUser) {
+
+
+
+
+        return null;
+
+    }
 }

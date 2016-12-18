@@ -58,6 +58,4 @@ $('#login').submit(function(event){
   user.userName = $('input[name=luserName]').val();
   user.password = $('input[name=lpassword]').val();
   login(user);
-
-
 });

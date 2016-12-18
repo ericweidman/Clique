@@ -53,3 +53,9 @@ button#edit {
     left: 46%;
     top: 61%;
 }
+
+form#update {
+    position: fixed;
+    left: 38%;
+    top: 65%;
+}
